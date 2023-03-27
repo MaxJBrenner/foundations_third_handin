@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+<title>AI for students</title>
+{% endblock%}
+
+{% block body%}
+<div id="header">
+    <h1 class="title uppercase textCenter">AI tools for students</h1>
+    <h2 class="textCenter">
+      Find the best AI tools for school and university
+    </h2>
+    <p>
+      <strong>AI</strong> is the next paradigm shift. <br />
+      Thousands of <strong>AI tools</strong> pop up. <br />
+      We help you to <em>retain</em> the oversite.
+    </p>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSftQx-3VbTAViI57GqUxulbEraXS0xT9m3BDuYP0ukJnsCcLQ/viewform?usp=sf_link"
+    >
+      <button>Add new tool</button>
+    </a>
+  </div>
+
+  <div class="tool-section">
+    <div class="tool-box">
+      <h2 class="tool-heading">ChatGPT</h2>
+      <div class="tool-description">
+        <p>AI ChatBot - conversational search engine</p>
+        <a href="./tools/chatGPT.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+    <div class="tool-box">
+      <h2 class="tool-heading">Github Copilot</h2>
+      <div class="tool-description">
+        <p>
+          Ai code creator - text to code - suggest code and entire functions
+          in real-time
+        </p>
+        <a href="./tools/githubCopilot.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+    <div class="tool-box">
+      <h2 class="tool-heading">Dall E2</h2>
+      <div class="tool-description">
+        <p>
+          AI image creator - create realistic images and art from a
+          description in natural language
+        </p>
+        <a href="./tools/dallE2.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+    <div class="tool-box">
+      <h2 class="tool-heading">Copy.ai</h2>
+      <div class="tool-description">
+        <p>
+          AI writing platform - Generate many types of content (e.g. Blogs)
+        </p>
+        <a href="./tools/copyAi.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+    <div class="tool-box">
+      <h2 class="tool-heading">Writer</h2>
+      <div class="tool-description">
+        <p>
+          PAI writing platform - unlock on-brand content at scale (+ AI
+          Content Detector)
+        </p>
+        <a href="./tools/writer.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+    <div class="tool-box">
+      <h2 class="tool-heading">Writesonic</h2>
+      <div class="tool-description">
+        <p>
+          AI writing platform - Generate many types of content (e.g Blog Post,
+          Tweets, LinkedIn Posts)
+        </p>
+        <a href="./tools/writesonic.html"> <button>More Info</button> </a>
+      </div>
+    </div>
+  </div>
+  
+  {% endblock%}

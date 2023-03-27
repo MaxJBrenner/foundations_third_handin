@@ -1,0 +1,69 @@
+* {
+    font-family: Outfit;
+  }
+
+
+h1 {
+    color: black;
+    font-family: Outfit;
+}
+
+h2 {
+    color: gray;
+    font-family: Outfit;
+}
+
+p {
+    font-family: Outfit;
+}
+
+.title {
+    color: black;
+    font-family: Outfit;
+  }
+  
+.uppercase {
+    text-transform: uppercase;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  text-align: center;
+}
+
+.tool-section {
+  padding: 100px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  max-width: 1000px;
+}
+
+@media screen and (min-width:800px) {
+  .tool-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tool-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.tool-box {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
