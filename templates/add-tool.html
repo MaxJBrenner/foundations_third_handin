@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/main.css') }}"
+/>
+<title>Task Master</title>
+{% endblock %} {% block body %}
+<h1>Add a new tool</h1>
+<form action="/" method="POST">
+  Name: <input type="text" id="name" name="name" /><br />
+  Description:
+  <input type="text" id="description" name="description" /><br />
+  Content:
+  <input type="text" id="content" name="content" /><br />
+  Link:
+  <input type="text" id="link" name="link" /><br />
+  <a href="./tools/chatGPT.html"
+    ><br />
+    <button>Add Tool</button>
+  </a>
+</form>
+{% endblock %}

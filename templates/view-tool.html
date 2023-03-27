@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/main.css') }}"
+/>
+<title>Task Master</title>
+{% endblock %} {% block body %}
+<a href="/"> <button>Back to explore all tools</button> </a>
+<div id="header">
+  <h1 class="title textCenter">{{tool["name"]}}</h1>
+  <h2 class="textCenter">{{tool["description"]}}</h2>
+  <p>{{tool["content"]}}</p>
+  <a href="{{tool["link"]}}"> <button>Visit</button> </a>
+</div>
+{% endblock %}

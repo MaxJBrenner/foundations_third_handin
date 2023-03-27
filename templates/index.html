@@ -1,41 +1,36 @@
-{% extends 'base.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/main.css') }}"
+/>
 <title>Task Master</title>
-{% endblock %}
+{% endblock %} {% block body %}
+<div class="tool-section">
+  <div id="header">
+    <h1 class="title uppercase textCenter">AI tools for students</h1>
+    <h2 class="textCenter">Find the best AI tools for school and university</h2>
+    <p>
+      <strong>AI</strong> is the next paradigm shift. <br />
+      Thousands of <strong>AI tools</strong> pop up. <br />
+      We help you to <em>retain</em> the oversite.
+    </p>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSftQx-3VbTAViI57GqUxulbEraXS0xT9m3BDuYP0ukJnsCcLQ/viewform?usp=sf_link"
+    >
+      <a href="/add-tool">Add new tool</button>
+    </a>
+  </div>
 
-{% block body %}
-<div class="content">
-    <h1 style="text-align: center">Task Master</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
-    {% else %}
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
-        </tr>
-        {% for task in tasks %}
-            <tr>
-                <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
-                <td>
-                    <a href="/delete/{{task.id}}">Delete</a>
-                    <br>
-                    <a href="/update/{{task.id}}">Update</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
-
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
-        </form>
+  {% if tools|length < 1 %}
+  <h1>There are no AI Tools yet...</h1>
+  {% endif %} {% for tool in tools %}
+  <div class="tool-box">
+    <h2 class="tool-heading">{{ tool["name"] }}</h2>
+    <div class="tool-description">
+      <p>{{ tool["description"] }}</p>
+      <a href="/view-tool?id={{ tool["id"] }}"> <button>More Info</button> </a>
     </div>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}
